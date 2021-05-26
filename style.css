@@ -1,0 +1,151 @@
+
+@font-face {
+    font-family: nunito;
+    src: url(Nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(quicksand/Quicksand-VariableFont_wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nunito;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.titre_page {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*Menu admin*/
+
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: #114d61;
+    display: flex;
+}
+
+nav ul{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul li{
+width: 20%;
+text-align: center;
+color: #fff;
+font-size: 20px;
+}
+
+/*Connexion admin*/
+.formulaire_titre{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 75px;
+}
+.formulaire_admin{
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #114d61;
+    padding-top: 50px;
+}
+
+.formulaire_admin input{
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 2px ;
+    border: none;
+    width: 250px;
+    margin-bottom: 40px;
+    color: #114d61;
+    font-size: 15px;
+}
+
+::placeholder{
+    color: #114d61;
+    font-size: 15px;
+}
+
+/* carte lien de l'accueil admin*/
+
+.carte_admin {
+    transition: .2s ease;
+    width: 28%;
+    min-height: 250px;
+    height: auto;
+    padding: 15px;
+    margin-top: 40px;
+    color: #fff;
+    background-color: #114d61;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 3px 1px #114d61;
+}
+
+.carte_admin:hover {
+    cursor: pointer;
+    transition: .5s ease;
+    height: auto;
+    padding: 15px;
+    margin-top: 40px;
+    color: #114d61;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 7px 1px #114d61;
+}
+
+.carte_admin__image {
+    margin-top: 15px;
+    width: 64px;
+}
+
+.carte_admin__titre {
+    font-family: nunito;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+}
+
+.carte_admin__description {
+    font-family: nunito;
+    font-size: 17px;
+    margin-top: 15px;
+    text-align: center;
+    width: 75%;
+}
