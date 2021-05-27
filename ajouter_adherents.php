@@ -11,53 +11,68 @@
 </head>
 
 <body>
+    <!-- Inclure le menu -->
+    <?php include("menu_admin.php"); ?>
 
+    <!-- Inclure le menu -->
+    <h1 class="titre_page">Ajouter un adhérent à la CPME</h1>
 
     <!-- Formulaire d'ajout d'adhérent -->
     <form class="add-form_adherent" method="post">
-        <h1 class="titre_page">Ajouter un adhérent</h1>
-        <div class="entree_container">
-            <label>Nom</label>
-            <input type="text" name="nom">
+        <div class="add-form_div">
+            <label>Nom</label><br>
+            <input class="add-form_input" type="text" name="nom">
         </div>
-        <div class="entree_container">
-            <label>Prenom</label>
-            <input type="text" name="prenom">
+        <div class="add-form_div">
+            <label>Prenom</label><br>
+            <input class="add-form_input" type="text" name="prenom">
         </div>
-        <div class="entree_container">
-            <label>Teléphone</label>
-            <input type="text" name="telephone">
+        <div class="add-form_div">
+            <label>Teléphone</label><br>
+            <input class="add-form_input" type="text" name="telephone">
         </div>
-        <div class="entree_container">
-            <label>Mail</label>
-            <input type="text" name="mail">
+        <div class="add-form_div">
+            <label>Email</label><br>
+            <input class="add-form_input" type="text" name="mail">
         </div>
-        <div class="entree_container">
-            <label>Section</label>
-            <input type="text" name="section">
+        <div class="add-form_div">
+            <label>Section</label><br>
+            <select class="add-form_input" name="section">
+                <option disabled value="null">Selectionnez une section</option>
+                <option value="artisanat">Artisanat</option>
+                <option value="btp/industrie">BTP/Industrie</option>
+                <option value="commerce">Commerce</option>
+                <option value="services">Services</option>
+            </select>
         </div>
-        <div class="entree_container">
-            <label>Entreprise</label>
-            <input type="text" name="entreprise">
+        <div class="add-form_div">
+            <label>Entreprise</label><br>
+            <input class="add-form_input" type="text" name="entreprise">
         </div>
-        <div class="entree_container">
-            <label>Adresse</label>
-            <input type="text" name="adresse">
+        <div class="add-form_div">
+            <label>Adresse</label><br>
+            <input class="add-form_input" type="text" name="adresse">
         </div>
-        <div class="entree_container">
-            <label>Secteur</label>
-            <input type="text" name="secteur">
+        <div class="add-form_div">
+            <label>Secteur</label><br>
+            <select class="add-form_input" name="secteur">
+                <option disabled value="null">Selectionnez un secteur</option>
+                <option value="nord">Nord</option>
+                <option value="ouest">Ouest</option>
+                <option value="sud">Sud</option>
+                <option value="est">Est</option>
+            </select>
         </div>
-        <div class="entree_container">
-            <label>Ville</label>
-            <input type="text" name="ville">
+        <div class="add-form_div">
+            <label>Ville</label><br>
+            <input class="add-form_input" type="text" name="ville">
         </div>
-        <div class="entree_container">
-            <label>Salariés</label>
-            <input type="number" name="nombre_salaries">
+        <div class="add-form_div">
+            <label>Salariés</label><br>
+            <input class="add-form_input" type="number" name="nombre_salaries">
         </div>
-        <div class="bouton_container">
-            <input class="bouton" type="submit" value="ajouter un adhérent" name="ajouter">
+        <div class="submit_div">
+            <input class="submit" type="submit" value="ajouter un adhérent" name="ajouter">
         </div>
     </form>
     <!-- Fin du formulaire d'ajout d'adhérent -->
@@ -70,37 +85,8 @@
         $requete = 'INSERT INTO adherents VALUES(NULL, "' . $_POST['nom'] . '", "' . $_POST['prenom'] . '", "' . $_POST['telephone'] . '", "' . $_POST['mail'] . '", "' . $_POST['section'] . '", "' . $_POST['entreprise'] . '", "' . $_POST['adresse'] . '", "' . $_POST['secteur'] . '", "' . $_POST['ville'] . '", "' . $_POST['nombre_salaries'] . '")';
         $resultat = $bdd->query($requete);
         $bdd = null;
-    }
-    ?>
-    <!-- Liste adhérents -->
-    <?php
-    include('config.php');
-    $reponse = $bdd->query('SELECT * FROM adherents');
-    while ($donnees = $reponse->fetch()) {
-        echo '<div>' . $donnees['nom']  . '<div>';
-        echo '<div>' . $donnees['prenom']  . '<div>';
-        echo '<div>' . $donnees['telephone']  . '<div>';
-        echo '<div>' . $donnees['mail']  . '<div>';
-        echo '<div>' . $donnees['section']  . '<div>';
-        echo '<div>' . $donnees['entreprise']  . '<div>';
-        echo '<div>' . $donnees['adresse']  . '<div>';
-        echo '<div>' . $donnees['secteur']  . '<div>';
-        echo '<div>' . $donnees['ville']  . '<div>';
-        echo '<div>' . $donnees['nombre_salaries']  . '<div>';
-        echo '<form method="post"><input name="id_adherent" type="hidden" value="' . $donnees['id'] . '">';
-        echo '<input name="supprimer" type="submit" value="supprimer">
-            </form>';
-        echo '<form method="post"><input name="id_adherent" type="hidden" value="' . $donnees['id'] . '">';
-        echo '<input name="modifier" type="submit" value="modifier">
-            </form>';
-        if (isset($_POST['supprimer'])) {
-            $requete = 'DELETE FROM adherents WHERE id="' . $_POST['id_adherent'] . '"';
-            $reponse = $bdd->query($requete);
-            echo '<script>document.location.replace("ajouter_adherents.php");alert("L\'adhérent à bien été supprimé");</script>';
-        }
-        if (isset($_POST['modifier'])) {
-            echo '<script>document.location.replace("modifier_adherents.php?id=' . $_POST['id_adherent'] . '");</script>';
-        }
+        echo '<script>alert("L\'adhérent a bien été ajouté");
+        document.location.replace("ajouter_adherents.php");</script>';
     }
     ?>
 </body>

@@ -1,9 +1,11 @@
 <nav>
-    <ul>
-        <li><a href="index.php">Accueil</li></a>
-        <li><a href="liste_articles.php">Liste des articles</li></a>
-        <li><a href="liste_adherents.php.php">Liste des adhérents</li></a>
-        <li><a href="annuaire_adherents.php">Annuaire adhérents</li></a>
-        <li><a href="mandataires.php">Annuaire mandats</li></a>
-    </ul>
-</nav>
+        <div onclick="document.location.replace('accueil_admin.php');" id="container">
+            <img id="menu_logo" src="images/logo_cpme.jpg" alt="">
+        </div>
+        <ul id="menu_liste">
+            <li class="menu_liste_item"><a href="liste_adherents.php">Les adhérents</a> </li>
+            <li class="menu_liste_item"><a href="annuaire_adherents.php">L'annuaire</a></li>
+            <li class="menu_liste_item"><a href="liste_articles.php">Les articles</a></li>
+            <li class="menu_liste_item"><a href="mandataires.php">Les mandataires</a></li>
+        </ul>
+    </nav>
