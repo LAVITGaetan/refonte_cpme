@@ -15,7 +15,6 @@
     <!-- Inclure le menu admin -->
 
     <?php include('menu_admin.php'); ?>
-
     <h1 class="titre_page">Liste des adhérents</h1>
     <!-- Barre de recherche -->
     <div class="barre_options">
@@ -129,7 +128,7 @@
             </div>
             <div class="carte-adherent_ligne">
                 <div class="carte-adherent_icone">
-                    <img width="22px" height="22px" src="images/email.svg" alt=""></img>
+                    <img width="22px" height="22px" src="images/mail.svg" alt=""></img>
                 </div>
                 <div class="carte-adherent_texte">' . $donnees['mail'] . '</div>
             </div>

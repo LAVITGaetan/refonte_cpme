@@ -6,6 +6,6 @@
             <li class="menu_liste_item"><a href="liste_adherents.php">Les adhérents</a> </li>
             <li class="menu_liste_item"><a href="annuaire_adherents.php">L'annuaire</a></li>
             <li class="menu_liste_item"><a href="liste_articles.php">Les articles</a></li>
-            <li class="menu_liste_item"><a href="mandataires.php">Les mandataires</a></li>
+            <li class="menu_liste_item"><a href="annuaire_mandats.php">Les mandataires</a></li>
         </ul>
     </nav>
