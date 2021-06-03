@@ -15,16 +15,20 @@
     <!-- Inclure le menu admin -->
 
     <?php include('menu_admin.php'); ?>
-    <h1 class="titre_page">Nos mandats</h1>
+    <div style="margin-bottom:40px;height:200px;display: flex;justify-content:center;align-items:center; background: url(images/head.jpg);background-size:cover;background-position:center;">
+        <h1 class="titre_page">Militez en faveur des Petites et Moyennes Entreprises !</h1>
+    </div>
+
+
     <div class="flex-container">
-        <div class="carte-info_mandats"><span class="carte-info_mandats__titre">Qu'est-ce qu'un mandat?</span>
+        <div class="carte-info_mandats"><span class="carte-info_mandats__titre">Qu'est-ce qu'un mandat ?</span>
             <p class="carte-info_mandats__texte">Selon l’article 1984 du Code civil« Le mandat ou procuration est un acte par lequel une personne donne à une autre le pouvoir de faire quelque chose pour le mandant et en son nom ». La CPME Réunion assure une mission de représentation et de défense des Petites et Moyennes Entreprises à travers la participation aux instances de concertation officielle.</p>
         </div>
-        <div class="carte-info_mandats"><span class="carte-info_mandats__titre">Quel est le rôle du mandataire?</span>
-            <p class="carte-info_mandats__texte">Les mandataires de la CPME sont des entrepreneurs qui s’engagent pour défendre l’esprit d’entreprendre et pour représenter localement les petites et moyennes entreprises dans les différentes instances de la société civile. Nous devons proposer et agir pour les entreprises, contrôler et participer à l’organisation des structures que nos entreprises financent.</p>
+        <div class="carte-info_mandats"><span class="carte-info_mandats__titre">Quel est le rôle du mandataire ?</span>
+            <p class="carte-info_mandats__texte">Les mandataires de la CPME sont des entrepreneurs qui s’engagent pour défendre l’esprit d’entreprendre et pour représenter localement les Petites et Moyennes Entreprises dans les différentes instances de la société civile. Nous devons proposer et agir pour les entreprises, contrôler et participer à l’organisation des structures que nos entreprises financent.</p>
         </div>
     </div>
-    <h1 class="titre_page">Les organismes représentées</h1>
+    <h1 class="titre_page">Cartographie de l'ensemble des mandats</h1>
     <div class="container-blue">
         <div class="select_organismes">
 
@@ -51,7 +55,7 @@
             </div>
 
             <div id="organisme2">
-                <div class="organisme_container"> <span class="organisme_sigle">CAF</span><span class="organisme_definition">Caisse d'Allocation Familiales</span></div>
+                <div class="organisme_container"> <span class="organisme_sigle"></span><span class="organisme_definition">Caisse d'Allocation Familiales</span></div>
                 <div class="organisme_container"> <span class="organisme_sigle">CDI</span><span class="organisme_definition">Centre Départementale des Impôts</span></div>
                 <div class="organisme_container"> <span class="organisme_sigle">CGSS</span><span class="organisme_definition">Caisse Générale de Sécurité Sociale</span></div>
                 <div class="organisme_container"> <span class="organisme_sigle">CRC</span><span class="organisme_definition">Caisse Réunionnaise Complémentaire</span></div>
